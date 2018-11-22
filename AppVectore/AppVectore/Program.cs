@@ -28,7 +28,7 @@ namespace AppVectore
             }
 
             Console.WriteLine("2 elevado a la 5 es igual a: {0}",potencia(2,5));
-
+            Console.WriteLine("LA NOTA 5 EQUIALE A:  {0}", NotaEquivalente(5));
             Console.ReadKey();
         }
 
@@ -49,6 +49,23 @@ namespace AppVectore
                 p = p * x;
             }
             return p;
+        }
+
+        public static String NotaEquivalente(double nota)
+        {
+            if (nota >= 0 && nota < 5)
+                return "Suspenso";
+            else if (nota >= 5 && nota < 6.5)
+                return "Aprobado";
+            else if (nota >= 6.5 && nota < 8.5)
+                return "Notable";
+            else if (nota >= 8.5 && nota < 10)
+                return "Sobresaliente";
+            else if (nota == 10)
+                return " MATRICULA DE HONOR";
+            else
+                return " nota fuera de rango"; 
+
         }
     }
 }
