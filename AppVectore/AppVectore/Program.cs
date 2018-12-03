@@ -28,8 +28,42 @@ namespace AppVectore
             }
 
             Console.WriteLine("2 elevado a la 5 es igual a: {0}",potencia(2,5));
-            Console.WriteLine("LA NOTA 5 EQUIALE A:  {0}", NotaEquivalente(5));
+            Console.WriteLine("LA NOTA 5 EQUIVALE A:  {0}", NotaEquivalente(5));
+            vectorInicializar();
+
+
             Console.ReadKey();
+        }
+
+        public static void vectorInicializar()
+        {
+            int[] x=new int[8];
+            x[0] = 10;
+            x[1] = 2;
+            x[2] = 20;
+            x[3] = 8;
+            x[4] = 15;
+            x[5] = 1;
+            x[6] = -9;
+            x[7] = 14;
+            //imprimir el vector
+            Console.WriteLine("\nELEMENTOS DEL VECTOR\n===================\n");
+            for(int i=0;i<8;i++)
+            {
+                Console.WriteLine("Elemento índice {0} --> {1} ", (i + 1), x[i]);
+            }
+
+            //sumatoria de los elementos del vector
+            int suma = 0;
+            for (int i = 0; i < x.Length; i++)
+            {
+                suma = suma + x[i];
+            }
+
+            Console.WriteLine("La sumatoria es {0}", suma);
+            Console.WriteLine("El promedio es  {0}", (double)suma/x.Length);
+
+
         }
 
         public static double potencia (double x, int y)
